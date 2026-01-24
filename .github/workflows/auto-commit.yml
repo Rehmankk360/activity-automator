@@ -2,7 +2,7 @@ name: Auto Commit
 
 on:
   schedule:
-    - cron: '0 */2 * * *' # Every 2 hours
+    - cron: '* * * * *' # Every minute (Note: GitHub executes this every ~5-10 mins at best)
   workflow_dispatch: # Allows manual triggering
 
 jobs:
