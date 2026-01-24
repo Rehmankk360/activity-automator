@@ -1,9 +1,12 @@
 name: Auto Commit
 
 on:
+  push:
+    branches:
+      - main
   schedule:
-    - cron: '* * * * *' # Every minute (Note: GitHub executes this every ~5-10 mins at best)
-  workflow_dispatch: # Allows manual triggering
+    - cron: '*/30 * * * *' # Every 30 minutes
+  workflow_dispatch:
 
 jobs:
   auto-commit:
