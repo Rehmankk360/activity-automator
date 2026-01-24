@@ -1,0 +1,14 @@
+{
+  "name": "github-activity-automator",
+  "version": "1.0.0",
+  "description": "Auto-commit script for GitHub contributions",
+  "main": "commit.js",
+  "scripts": {
+    "start": "node commit.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "author": "Rehman Khan",
+  "license": "MIT"
+}
