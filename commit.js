@@ -5,11 +5,17 @@ const filePath = path.join(__dirname, 'activity.json');
 
 const updateActivity = () => {
     try {
+        // 70% chance to update, 30% chance to skip
+        if (Math.random() > 0.7) {
+            console.log("Random skip: No update this time.");
+            return;
+        }
+
         const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-        
+
         data.last_updated = new Date().toISOString();
         data.counter = (data.counter || 0) + 1;
-        
+
         fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
         console.log(`Updated activity.json: ${data.last_updated}, counter: ${data.counter}`);
     } catch (error) {
