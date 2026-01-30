@@ -6,7 +6,7 @@ const filePath = path.join(__dirname, 'activity.json');
 const updateActivity = () => {
     try {
         // 70% chance to update, 30% chance to skip
-        if (Math.random() > 0.7) {
+        if (Math.random() > 0.5) {
             console.log("Random skip: No update this time.");
             return;
         }
